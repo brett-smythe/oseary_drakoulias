@@ -60,3 +60,9 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+#Ignore credentials
+interns/creds/
+
+#Ignore swap files
+*.swp
