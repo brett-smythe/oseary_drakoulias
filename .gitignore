@@ -62,7 +62,7 @@ target/
 .ipynb_checkpoints
 
 #Ignore credentials
-interns/creds/
+oseary/creds/
 
 #Ignore swap files
 *.swp
