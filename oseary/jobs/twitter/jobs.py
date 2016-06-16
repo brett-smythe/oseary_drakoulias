@@ -24,10 +24,11 @@ class TwitterJobs(object):
             self.running = False
 
         while self.running:
-            poison_check = queue.get_nowait()
-            if poison_check == oseary_settings.process_poison:
-                self.running = False
-                continue
+            if not self.queue.empty():
+                poison_check = self.queue.get_nowait()
+                if poison_check == oseary_settings.process_poison:
+                    self.running = False
+                    continue
             self.execute_next_job()
             
         # Run the process here

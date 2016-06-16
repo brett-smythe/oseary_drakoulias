@@ -13,8 +13,8 @@ with cod_open('README.md', encoding='utf-8') as inf:
 reqs = []
 with open('requirements.txt') as inf:
     for line in inf:
-        line = line.stip()
-        req.append(line)
+        line = line.strip()
+        reqs.append(line)
 
 setup(
     name='oseary',
@@ -27,7 +27,8 @@ setup(
     install_requires=reqs,
     entry_points={
         'console_scripts': [
-            'oseary=oseary.main:test'
+            'oseary-test=oseary.main:test',
+            'oseary=oseary.main:run_service'
         ]
     }
 )
