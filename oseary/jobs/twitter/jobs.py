@@ -30,16 +30,24 @@ class TwitterJobs(object):
                     self.running = False
                     continue
             self.execute_next_job()
-            
-        # Run the process here
 
     def update_tracked_users(self):
+        """
+        Get tracked twitter usernames
+        """
         self.tracked_twitter_users = utils.get_tracked_twitter_usernames()
 
     def get_user_timeline_tweets(self, username):
+        """
+        Pull the timeline tweets from username
+        """
         intern_tasks.get_user_timeline_tweets(username)
 
     def execute_next_job(self):
+        """
+        Determines and runs the next fetch job, takes care of sleeping between
+        jobs
+        """
         self.time_to_execute = (
             (time.time() - self.last_execution_time) >= self.sleep_secs
         )
