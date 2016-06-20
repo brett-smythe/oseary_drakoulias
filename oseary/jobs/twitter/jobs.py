@@ -48,6 +48,8 @@ class TwitterJobs(object):
         Determines and runs the next fetch job, takes care of sleeping between
         jobs
         """
+        self.twitterLimits.update_limits()
+        self.sleep_secs = self.twitterLimits.get_sleep_between_jobs()
         self.time_to_execute = (
             (time.time() - self.last_execution_time) >= self.sleep_secs
         )
