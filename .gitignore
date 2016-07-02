@@ -66,3 +66,6 @@ oseary/creds/
 
 #Ignore swap files
 *.swp
+
+# Ignore logs
+oseary/logs/*

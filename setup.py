@@ -33,3 +33,4 @@ setup(
     }
 )
 
+print path_to_here
