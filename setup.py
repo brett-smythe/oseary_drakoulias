@@ -23,6 +23,8 @@ setup(
     long_description=long_description,
     author='Brett Smythe',
     author_email='smythebrett@gmail.com',
+    maintainer='Brett Smythe',
+    maintainer_email='smythebrett@gmail.com',
     packages=find_packages(),
     install_requires=reqs,
     entry_points={
@@ -33,4 +35,3 @@ setup(
     }
 )
 
-print path_to_here

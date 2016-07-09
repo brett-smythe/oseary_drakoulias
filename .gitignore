@@ -69,3 +69,6 @@ oseary/creds/
 
 # Ignore logs
 oseary/logs/*
+
+# Ignore deb
+debian/*
