@@ -18,7 +18,7 @@ with open('requirements.txt') as inf:
 
 setup(
     name='oseary',
-    version='0.0',
+    version='0.1',
     description='Scheduler for worker tasks',
     long_description=long_description,
     author='Brett Smythe',
